@@ -5,8 +5,62 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calc"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Calculator" MinHeight="500" MinWidth="300" Height="500" Width="300" 
+        WindowStartupLocation="CenterScreen"
+        Background="LightGray"
+        ResizeMode="NoResize">
     <Grid>
-        <Button>X</Button>
+        <!--Grid columns-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <!--Grid rows-->
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <!--Buttons-->
+        <Button x:Name="but_1" Grid.Row="7" Content="1"/>
+        <Button x:Name="but_2" Grid.Row="7" Grid.Column="1" Content="2"/>
+        <Button x:Name="but_3" Grid.Row="7" Grid.Column="2" Content="3"/>
+        <Button x:Name="but_4" Grid.Row="6" Content="4"/>
+        <Button x:Name="but_5" Grid.Row="6" Grid.Column="1" Content="5"/>
+        <Button x:Name="but_6" Grid.Row="6" Grid.Column="2" Content="6"/>
+        <Button x:Name="but_7" Grid.Row="5" Content="7"/>
+        <Button x:Name="but_8" Grid.Row="5" Grid.Column="1" Content="8"/>
+        <Button x:Name="but_9" Grid.Row="5" Grid.Column="2" Content="9"/>
+        <Button x:Name="but_0" Grid.Row="8" Grid.Column="1" Content="0"/>
+        <Button x:Name="but_sign" Grid.Row="8" Content="+/-"/>
+        <Button x:Name="but_dot" Grid.Row="8" Grid.Column="2" Content="."/>
+        <Button x:Name="but_result" Grid.Row="8" Grid.Column="3" Content="="/>
+        <Button x:Name="but_add" Grid.Row="7" Grid.Column="3" Content="+"/>
+        <Button x:Name="but_sub" Grid.Row="6" Grid.Column="3" Content="-"/>
+        <Button x:Name="but_mul" Grid.Row="5" Grid.Column="3" Content="х"/>
+        <Button x:Name="but_div" Grid.Row="4" Grid.Column="3" Content="÷"/>
+        <Button x:Name="but_pow" Grid.Row="4" Grid.Column="2" Content="x²"/>
+        <Button x:Name="but_sqrt" Grid.Row="4" Grid.Column="1" Content="√x"/>
+        <Button x:Name="but_Xdiv" Grid.Row="4" Content="1/x"/>
+        <Button x:Name="but_sin" Grid.Row="3" Content="sin"/>
+        <Button x:Name="but_cos" Grid.Row="3" Grid.Column="1" Content="cos"/>
+        <Button x:Name="but_tg" Grid.Row="3" Grid.Column="2" Content="tg"/>
+        <Button x:Name="but_ctg" Grid.Row="3" Grid.Column="3" Content="ctg"/>
+        <Button x:Name="but_del" Grid.Row="2" Grid.Column="3" Content="⌫"/>
+        <Button x:Name="but_clr" Grid.Row="2" Grid.Column="2" Content="C"/>
+        <Button x:Name="but_deg" Grid.Row="2" Content="DEG"/>
+        <!--Text box-->
+        <TextBlock x:Name="tb_arg1" Grid.Row="1"></TextBlock>
+        <TextBlock x:Name="tb_op" Grid.Row="1" Grid.Column="1"></TextBlock>
+        <TextBlock x:Name="tb_arg2" Grid.Row="1" Grid.Column="2"></TextBlock>
+        <TextBlock x:Name="tb_res" Grid.Row="1" Grid.Column="3"></TextBlock>
     </Grid>
 </Window>
